@@ -1,0 +1,25 @@
+body {
+    background-color: darkslategrey;
+    color: white;
+    margin: 0;
+    padding: 2rem;
+    border: 1em solid black;
+}
+
+li {
+    list-style-image: url(./arrow-right.png);
+    /* background-color: red;
+    list-style-position: inside;
+    width: fit-content; */
+}
+
+a {
+    color: bisque;
+}
+
+/* seletor hover, ativa quando o mouse é passado por cima. */
+/* Pra a tag 'a' existem outros seletores como link e visited */
+a:hover {
+    background-color: brown;
+    color: aquamarine;
+}

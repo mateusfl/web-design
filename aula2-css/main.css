@@ -1,0 +1,16 @@
+/* Seletor (body) é usado para selecionar o que vai ser formatado */
+body {
+    background-color: cadetblue;
+    font-size: 2em;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+}
+
+ul {
+    list-style-type: square;
+}
+
+h1 {
+    color: plum;
+    text-align: center;
+}

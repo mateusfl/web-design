@@ -1,0 +1,27 @@
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+img {
+    vertical-align: middle;
+    border: 3px dashed aquamarine;
+    padding: 1rem;
+}
+
+a {
+    display: inline-block;
+    padding: 1em;
+}
+
+a:hover {
+    background-color: bisque;
+}
+
+figure {
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(255, 255, 242);
+}
+header {
+
+}
+
+h1 {
+    text-align: center;
+}
+
+figure img {
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    margin: auto;
+}
+
+ul img {
+    padding: 0.5rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    text-align: center;
+}
+
+h2 {
+    font-family: garamond;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 35px;
+
+    border-bottom: 4px solid lightgoldenrodyellow;
+}
+
+p {
+    font-family: garamond;
+    font-weight: 500;
+    font-style: normal;
+
+    width: 30%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+address {
+    font-family: garamond;
+    font-weight: 500;
+    font-style: italic;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: white;
+}
