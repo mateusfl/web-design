@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li.atual a {
+    color: cadetblue;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+td, th {
+    border: 1px solid blue;
+    padding: 0.5rem;
+}
+
+tr:nth-child(odd) {
+    background-color: beige;
+}
