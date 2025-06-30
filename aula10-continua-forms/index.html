@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SÃO PEDRO - IFRN CNAT</title>
+    </head>
+    <body>
+        <header>
+            <h1>SÃO PEDRO DO IFRN CAMPUS NATAL CENTRAL</h1>
+        </header>
+        <main>
+            <h2>Inscrição para o Evento</h2>
+            <form action="enviar.html">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" /><br />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" /><br />
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" list="cidades" />
+                <!-- Datalist não é um combobox, a funcionalidade de filtro se confunde em algumas libs mas o nome correto é datalist -->
+                <datalist id="cidades">
+                    <option value="natal">Natal</option>
+                    <option value="parnamirim">Parnamirim</option>
+                </datalist>
+                <br />
+
+                <label for="course">Curso: </label>
+                <!-- Select pode ser chamado de combobox, não confundir com datalist -->
+                <select name="course" id="course">
+                    <option value="tads" selected>TADS</option>
+                    <option value="gestao">Gestão Pública</option>
+                    <option value="redes">Redes de Computadores</option>
+                </select>
+                <br />
+
+                <input type="submit" value="Enviar" />
+            </form>
+
+            <h2>ENQUETE</h2>
+            <form action="enviar.html">
+                <p>Sobre as músicas</p>
+                <label>
+                    <input type="radio" name="musicas" value="tudo" />
+                    Toca de tudo
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="musicas" value="soforro" />
+                    Só o forró
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="musicas" value="cleitorasta" />
+                    Cleito rasta
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="musicas" value="cleitorasta" />
+                    Calcinha preta
+                </label>
+                <br />
+                <input type="submit" value="Enviar" />
+            </form>
+
+            <h2>Contato</h2>
+            <form action="enviar.html">
+                <label for="mensagem">Mensagem: </label>
+                <br />
+                <textarea
+                    name="mensagem"
+                    id="mensagem"
+                    cols="30"
+                    rows="10"
+                ></textarea>
+                <br />
+                <input type="submit" value="Enviar" />
+            </form>
+
+            <h2>Comidas preferidas</h2>
+            <form action="enviar.html">
+                <label>
+                    <input
+                        type="checkbox"
+                        name="Comidas"
+                        value="pamonha"
+                        disabled
+                    />
+                    Pamonha
+                </label>
+                <br />
+                <label>
+                    <input type="checkbox" name="Comidas" value="canjica" />
+                    Canjica
+                </label>
+                <br />
+                <label>
+                    <input type="checkbox" name="Comidas" value="arroz" />
+                    Arroz Doce
+                </label>
+                <br />
+                <label>
+                    <input type="checkbox" name="Comidas" value="munguza" />
+                    Munguzá
+                </label>
+            </form>
+        </main>
+        <footer><p>Desenvolvido por IFRN</p></footer>
+    </body>
+</html>
