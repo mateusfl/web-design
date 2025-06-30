@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DISPLAY</title>
+        <style>
+            div {
+                background-color: aquamarine;
+            }
+
+            span {
+                background-color: goldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- Div NÂO TEM valor semântico, não usar exageradamente.  -->
+            <!-- Utilizar somente para agrupar itens que não faça sentido agrupar em uma tag semântica (ex. Card) -->
+            <!-- É necessário usar tags dentro da div (texto solto dentro está errado) -->
+            texto dentro da div - block
+        </div>
+
+        <p>
+            <span>
+                <!-- span também não tem valor semântico -->
+                <!-- Texto deve ficar dentro do span, e o correto é o span estar dentro de outra tag, nesse caso <p> -->
+                texto dentro do span - inline
+            </span>
+        </p>
+    </body>
+</html>
