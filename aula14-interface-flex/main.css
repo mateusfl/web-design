@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+h1 {
+    margin: 1rem;
+}
+
+main {
+    max-width: 70rem; /* Essa largura deve ser definida com base nos usuários do site (após ele estar no ar, com alguma ferramenta de analytics) */
+    margin: 2rem auto;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+
+section div {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 0.3rem;
+    width: 265px;
+    box-shadow: 1px 1px 5px lightgray;
+}
+
+div img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    /* flex basis define uma largura para o item dentro da flexbox. É necessário usar o flex-wrap no parent para permitir que o resto dos itens desçam para a próxima linha  */
+    flex-basis: 100%;
+}
+
+footer {
+    margin: 1rem;
+}

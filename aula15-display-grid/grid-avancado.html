@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GRID BASICO</title>
+        <style>
+            main {
+                /* Margem para centralizar, mas não é obrigatório para a grid */
+                margin: 0 auto;
+                max-width: 70%;
+
+                display: grid;
+
+                /* A Quantidade de valores usados nessa propriedade precisa ser a mesma das colunas no template-areas */
+                /* É possível utilizar outras unidades além de fr, ou até misturar unidades */
+                grid-template-columns: 1fr 2fr 2fr;
+
+                grid-template-rows: 9rem 12rem 4rem; /* Controla a altura das linhas, serão aplicadas em cada linha da grid */
+
+                gap: 3px;
+                grid-template-areas:
+                    /* "nav a b"
+                    "nav a c"; */
+                    "nav a ." /* É possível deixar uma célula vazia usando o . */
+                    "nav b d"
+                    "nav c d";
+                /* Não é possível fazer mesclagens na diagonal, apenas para os lados, cima e baixo */
+            }
+
+            section,
+            nav {
+                border: 1px solid black;
+                padding-left: 8px;
+            }
+
+            section.item1 {
+                grid-area: a;
+            }
+
+            section.item2 {
+                grid-area: b;
+            }
+
+            section.item3 {
+                grid-area: c;
+            }
+
+            section.item4 {
+                grid-area: d;
+            }
+
+            nav {
+                grid-area: nav;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <p>NAV</p>
+            </nav>
+            <section class="item1 palestrante">
+                <p>ITEM 1</p>
+            </section>
+            <section class="item2">
+                <p>ITEM 2</p>
+            </section>
+            <section class="item3 palestrante">
+                <p>ITEM 3</p>
+            </section>
+            <section class="item4">
+                <p>ITEM 4</p>
+            </section>
+        </main>
+    </body>
+</html>

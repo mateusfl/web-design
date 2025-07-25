@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>POSITION-FIXED</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* a div antes do id é opcional, pois o id já é específico o suficiente */
+            div#container {
+                /* Position relative faz com que elementos FILHOS DESSE, posicionados absolutamente, passem a ter a posição relativa a ele */
+                position: relative;
+                margin: 1rem auto;
+                max-width: 70%;
+                background-color: #ddd;
+                padding: 1rem;
+                /* Nesse caso faz sentido usar o z-index para manter o position relative. Caso não precisasse também não precisaria do z-index */
+                z-index: 1;
+            }
+
+            header,
+            main,
+            footer {
+                border: 1px solid #999;
+                padding: 1rem;
+            }
+
+            div.cookies {
+                /* Position fixed torna o elemento fixo na página, e faz com que o display dele se torne "inline-block" */
+                position: fixed;
+                background-color: aqua;
+                padding: 2rem;
+                box-shadow: 0 0 1rem 0.1rem gray;
+                border-radius: 8px;
+                /* Essa largura é necessária para caso o conteúdo do elemento não ocupe a tela toda. Ela fará com que a largura fique completa independentemente */
+                width: 100vw; /* Por outro lado, caso queira afastar o elemento das bordas da página é necessário usar as coordenadas, e alterar a largura por consequência */
+                z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cookies">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                voluptatem rerum. Quis iusto, voluptatem, quos provident porro
+                eveniet consequatur incidunt aliquam culpa aspernatur
+                voluptatibus enim dolor assumenda dolorem quidem recusandae.
+            </p>
+        </div>
+        <div id="container">
+            <header>
+                <h1>Dia do amigo</h1>
+            </header>
+            <main>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis blanditiis at atque. Temporibus id exercitationem
+                    quia, tempora aspernatur impedit numquam facere recusandae
+                    neque necessitatibus eius, praesentium dolor! Cumque, id
+                    vero.
+                </p>
+                <p>
+                    Numquam repellat fugit culpa dolorem est ipsum quibusdam
+                    necessitatibus molestiae alias ab dolorum, voluptate nemo
+                    sit, tempore a aut facere modi officia provident voluptas. A
+                    repudiandae accusamus nam? Cupiditate, eum!
+                </p>
+                <p>
+                    Blanditiis incidunt voluptatum ea repellat cum maiores eius
+                    eum maxime sunt nihil assumenda id labore nesciunt sed odio
+                    soluta ullam porro commodi, nobis architecto sit ex enim?
+                    Ex, in doloremque.
+                </p>
+                <p>
+                    Eaque fuga provident delectus rem numquam deleniti modi
+                    ullam autem eius reiciendis illo maiores eligendi facilis
+                    accusamus distinctio temporibus vel laboriosam magni nobis,
+                    aperiam ex? At voluptatum facilis tempore maxime.
+                </p>
+                <p>
+                    Nihil deleniti minus deserunt, praesentium libero alias
+                    accusantium iure impedit aliquam adipisci harum odit
+                    incidunt atque quibusdam voluptate repudiandae temporibus
+                    recusandae. Animi officiis alias consequatur nisi repellat
+                    qui ratione dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis blanditiis at atque. Temporibus id exercitationem
+                    quia, tempora aspernatur impedit numquam facere recusandae
+                    neque necessitatibus eius, praesentium dolor! Cumque, id
+                    vero.
+                </p>
+                <p>
+                    Numquam repellat fugit culpa dolorem est ipsum quibusdam
+                    necessitatibus molestiae alias ab dolorum, voluptate nemo
+                    sit, tempore a aut facere modi officia provident voluptas. A
+                    repudiandae accusamus nam? Cupiditate, eum!
+                </p>
+                <p>
+                    Blanditiis incidunt voluptatum ea repellat cum maiores eius
+                    eum maxime sunt nihil assumenda id labore nesciunt sed odio
+                    soluta ullam porro commodi, nobis architecto sit ex enim?
+                    Ex, in doloremque.
+                </p>
+                <p>
+                    Eaque fuga provident delectus rem numquam deleniti modi
+                    ullam autem eius reiciendis illo maiores eligendi facilis
+                    accusamus distinctio temporibus vel laboriosam magni nobis,
+                    aperiam ex? At voluptatum facilis tempore maxime.
+                </p>
+                <p>
+                    Nihil deleniti minus deserunt, praesentium libero alias
+                    accusantium iure impedit aliquam adipisci harum odit
+                    incidunt atque quibusdam voluptate repudiandae temporibus
+                    recusandae. Animi officiis alias consequatur nisi repellat
+                    qui ratione dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis blanditiis at atque. Temporibus id exercitationem
+                    quia, tempora aspernatur impedit numquam facere recusandae
+                    neque necessitatibus eius, praesentium dolor! Cumque, id
+                    vero.
+                </p>
+                <p>
+                    Numquam repellat fugit culpa dolorem est ipsum quibusdam
+                    necessitatibus molestiae alias ab dolorum, voluptate nemo
+                    sit, tempore a aut facere modi officia provident voluptas. A
+                    repudiandae accusamus nam? Cupiditate, eum!
+                </p>
+                <p>
+                    Blanditiis incidunt voluptatum ea repellat cum maiores eius
+                    eum maxime sunt nihil assumenda id labore nesciunt sed odio
+                    soluta ullam porro commodi, nobis architecto sit ex enim?
+                    Ex, in doloremque.
+                </p>
+                <p>
+                    Eaque fuga provident delectus rem numquam deleniti modi
+                    ullam autem eius reiciendis illo maiores eligendi facilis
+                    accusamus distinctio temporibus vel laboriosam magni nobis,
+                    aperiam ex? At voluptatum facilis tempore maxime.
+                </p>
+                <p>
+                    Nihil deleniti minus deserunt, praesentium libero alias
+                    accusantium iure impedit aliquam adipisci harum odit
+                    incidunt atque quibusdam voluptate repudiandae temporibus
+                    recusandae. Animi officiis alias consequatur nisi repellat
+                    qui ratione dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis blanditiis at atque. Temporibus id exercitationem
+                    quia, tempora aspernatur impedit numquam facere recusandae
+                    neque necessitatibus eius, praesentium dolor! Cumque, id
+                    vero.
+                </p>
+                <p>
+                    Numquam repellat fugit culpa dolorem est ipsum quibusdam
+                    necessitatibus molestiae alias ab dolorum, voluptate nemo
+                    sit, tempore a aut facere modi officia provident voluptas. A
+                    repudiandae accusamus nam? Cupiditate, eum!
+                </p>
+                <p>
+                    Blanditiis incidunt voluptatum ea repellat cum maiores eius
+                    eum maxime sunt nihil assumenda id labore nesciunt sed odio
+                    soluta ullam porro commodi, nobis architecto sit ex enim?
+                    Ex, in doloremque.
+                </p>
+                <p>
+                    Eaque fuga provident delectus rem numquam deleniti modi
+                    ullam autem eius reiciendis illo maiores eligendi facilis
+                    accusamus distinctio temporibus vel laboriosam magni nobis,
+                    aperiam ex? At voluptatum facilis tempore maxime.
+                </p>
+                <p>
+                    Nihil deleniti minus deserunt, praesentium libero alias
+                    accusantium iure impedit aliquam adipisci harum odit
+                    incidunt atque quibusdam voluptate repudiandae temporibus
+                    recusandae. Animi officiis alias consequatur nisi repellat
+                    qui ratione dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis blanditiis at atque. Temporibus id exercitationem
+                    quia, tempora aspernatur impedit numquam facere recusandae
+                    neque necessitatibus eius, praesentium dolor! Cumque, id
+                    vero.
+                </p>
+                <p>
+                    Numquam repellat fugit culpa dolorem est ipsum quibusdam
+                    necessitatibus molestiae alias ab dolorum, voluptate nemo
+                    sit, tempore a aut facere modi officia provident voluptas. A
+                    repudiandae accusamus nam? Cupiditate, eum!
+                </p>
+                <p>
+                    Blanditiis incidunt voluptatum ea repellat cum maiores eius
+                    eum maxime sunt nihil assumenda id labore nesciunt sed odio
+                    soluta ullam porro commodi, nobis architecto sit ex enim?
+                    Ex, in doloremque.
+                </p>
+                <p>
+                    Eaque fuga provident delectus rem numquam deleniti modi
+                    ullam autem eius reiciendis illo maiores eligendi facilis
+                    accusamus distinctio temporibus vel laboriosam magni nobis,
+                    aperiam ex? At voluptatum facilis tempore maxime.
+                </p>
+                <p>
+                    Nihil deleniti minus deserunt, praesentium libero alias
+                    accusantium iure impedit aliquam adipisci harum odit
+                    incidunt atque quibusdam voluptate repudiandae temporibus
+                    recusandae. Animi officiis alias consequatur nisi repellat
+                    qui ratione dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis blanditiis at atque. Temporibus id exercitationem
+                    quia, tempora aspernatur impedit numquam facere recusandae
+                    neque necessitatibus eius, praesentium dolor! Cumque, id
+                    vero.
+                </p>
+                <p>
+                    Numquam repellat fugit culpa dolorem est ipsum quibusdam
+                    necessitatibus molestiae alias ab dolorum, voluptate nemo
+                    sit, tempore a aut facere modi officia provident voluptas. A
+                    repudiandae accusamus nam? Cupiditate, eum!
+                </p>
+                <p>
+                    Blanditiis incidunt voluptatum ea repellat cum maiores eius
+                    eum maxime sunt nihil assumenda id labore nesciunt sed odio
+                    soluta ullam porro commodi, nobis architecto sit ex enim?
+                    Ex, in doloremque.
+                </p>
+                <p>
+                    Eaque fuga provident delectus rem numquam deleniti modi
+                    ullam autem eius reiciendis illo maiores eligendi facilis
+                    accusamus distinctio temporibus vel laboriosam magni nobis,
+                    aperiam ex? At voluptatum facilis tempore maxime.
+                </p>
+                <p>
+                    Nihil deleniti minus deserunt, praesentium libero alias
+                    accusantium iure impedit aliquam adipisci harum odit
+                    incidunt atque quibusdam voluptate repudiandae temporibus
+                    recusandae. Animi officiis alias consequatur nisi repellat
+                    qui ratione dolorum.
+                </p>
+            </main>
+            <footer>
+                <p>Desenvolvido por IFRN</p>
+            </footer>
+        </div>
+    </body>
+</html>
