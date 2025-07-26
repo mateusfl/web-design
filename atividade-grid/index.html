@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GRID</title>
+        <style>
+            * {
+                margin: 0;
+            }
+
+            body {
+                font-family: "Roboto Mono", monospace;
+                height: 100vh;
+                display: grid;
+                gap: 1rem;
+                grid-template-areas:
+                    "h"
+                    "main"
+                    "f";
+            }
+            header {
+                background-image: linear-gradient(to left, #7292a6, #224459);
+                color: white;
+                padding: 2rem;
+            }
+            main {
+                grid-area: main;
+                display: grid;
+                gap: 1rem;
+                grid-template-areas:
+                    "nav a table table p1"
+                    "nav lista form p2 p3"
+                    "nav p4 form org org";
+
+                grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+            }
+
+            nav ul {
+                background-color: #c5d1d9;
+                color: #34748b;
+                padding: 1.5rem;
+                font-size: 2rem;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                gap: 3rem;
+            }
+
+            section {
+                background-color: lightgray;
+                padding: 1.5rem;
+            }
+            section ul {
+                font-family: sans-serif;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            section button {
+                font-size: small;
+                background-color: lightgray;
+                color: #224459;
+                padding: 5px;
+                border: 1px solid #224459;
+            }
+
+            header {
+                grid-area: h;
+            }
+
+            nav {
+                grid-area: nav;
+            }
+
+            section.lorem {
+                grid-area: a;
+                font-family: sans-serif;
+                line-height: 2rem;
+            }
+            section.lorem span {
+                font-weight: 600;
+                color: #224459;
+            }
+            section.programacao {
+                grid-area: table;
+                margin: 0;
+            }
+            section.programacao table {
+                width: 100%;
+                font-family: sans-serif;
+                margin-top: 1rem;
+                border: 1px solid white;
+            }
+            section.programacao td,
+            th {
+                font-weight: 400;
+                border: 1px solid white;
+                padding: 0.4rem;
+                padding-left: 4.5rem;
+                padding-right: 4.5rem;
+            }
+            section.palestrante1 {
+                grid-area: p1;
+                background-image: url(palestrantes/amanda.jpg);
+                background-size: cover;
+                filter: grayscale();
+            }
+            section.lista {
+                grid-area: lista;
+            }
+
+            section form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            section.form {
+                box-sizing: border-box;
+                padding: 3rem;
+                padding-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                grid-area: form;
+            }
+            section.form label {
+                font-family: sans-serif;
+            }
+            section.form input:not(.check) {
+                border: 1px solid black;
+                padding: 1rem;
+                padding-right: 0;
+            }
+            section.form button {
+                margin: 0 auto;
+                width: 50%;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                background-color: black;
+                color: white;
+            }
+
+            section.palestrante2 {
+                grid-area: p2;
+                background-image: url(palestrantes/georgia.jpg);
+                background-size: cover;
+                filter: grayscale();
+            }
+            section.palestrante3 {
+                grid-area: p3;
+                background-image: url(palestrantes/henrique.jpg);
+                background-size: cover;
+                filter: grayscale();
+            }
+            section.palestrante4 {
+                grid-area: p4;
+                background-image: url(palestrantes/ellen.jpg);
+                background-size: cover;
+                filter: grayscale();
+            }
+            section.organizacao h3 {
+                margin-bottom: 1rem;
+            }
+            section.organizacao {
+                grid-area: org;
+            }
+
+            footer {
+                font-size: small;
+                background-color: #224459;
+                color: white;
+                text-align: center;
+                padding: 4rem;
+                grid-area: f;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>SHIFT</h1>
+            <p>1º encontro de UX do IFRN</p>
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li>Inscrições</li>
+                    <li>Programação</li>
+                    <li>Palestrantes</li>
+                    <li>Organização</li>
+                    <li>Contato</li>
+                </ul>
+            </nav>
+            <section class="lorem">
+                <p>
+                    O evento será organizado
+                    <span class="highlight">Cillum</span> singulis voluptate o
+                    te <span class="highlight">enim</span> cillum ad aliquip,
+                    <span class="highlight">incididunt</span>.
+                </p>
+                <button>Ler mais</button>
+            </section>
+            <section class="programacao">
+                <h3>Programação</h3>
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="2">Dia 03/06</th>
+                            <td>08:00</td>
+                            <td>Abertura</td>
+                        </tr>
+                        <tr>
+                            <td>11:00</td>
+                            <td>Sorteios</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" rowspan="2">Dia 04/06</th>
+                            <td>08:00</td>
+                            <td>Palestra de Andrei Gurgel</td>
+                        </tr>
+                        <tr>
+                            <td>11:00</td>
+                            <td>Sorteios</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="palestrante1"></section>
+            <section class="lista">
+                <ul>
+                    <li>Palestras</li>
+                    <li>Workshops</li>
+                    <li>Minicursos</li>
+                    <li>Estudos de caso</li>
+                    <li>Prêmios</li>
+                </ul>
+            </section>
+            <section class="form">
+                <h3>Inscrição</h3>
+                <form action="#">
+                    <input type="text" placeholder="Nome" />
+                    <input type="email" placeholder="E-mail" />
+                    <input type="tel" placeholder="Celular" />
+                    <div>
+                        <input type="checkbox" name="alunoif" class="check" />
+                        <label for="alunoif">Aluno do IF</label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            <section class="palestrante2"></section>
+            <section class="palestrante3"></section>
+            <section class="palestrante4"></section>
+            <section class="organizacao">
+                <h3>Organização</h3>
+                <p>Professores da DIATINF/CNAT/IFRN:</p>
+                <ul>
+                    <li>Profa. Alyana Macêdo</li>
+                    <li>Profa. Danielle Freitas</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Desenvolvido por IFRN</p>
+        </footer>
+    </body>
+</html>
