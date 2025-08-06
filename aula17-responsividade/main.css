@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#container {
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: #dedede;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* Caso o layout tenha largura fluida, usar justify content pra colocar os itens de dentro da flex no centro */
+    justify-content: center;
+}
+
+main section {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    flex-basis: 20%;
+}
+
+header {
+    position: sticky;
+    padding: 4rem;
+    margin-bottom: 1rem;
+    background-image: url(imagem.png);
+    background-position: center;
+    /* Backgroud size: cover é similar à largura 100% */
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    main section {
+        background-color: aqua;
+        flex-basis: 45%;
+    }
+}
+
+/* no caso dessa condicional, usa-se px pois é necessário considerar o tamanho da tela do usuário, que é absoluta */
+@media screen and (max-width: 680px) {
+    main section {
+        background-color: aqua;
+        flex-basis: 85%;
+    }
+
+    header {
+        /* Visibility esconde o elemento mantendo o espaço que ele ocupa */
+        visibility: hidden;
+        /* Display none remove o elemento e também o espaço, como se removesse a tag do html */
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    main {
+        flex-direction: column;
+    }
+}

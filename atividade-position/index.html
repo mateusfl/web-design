@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atividade position</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+            }
+
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                width: fit-content;
+                margin: 0;
+                padding: 0;
+                background-color: #6a9a9a;
+            }
+
+            nav ul li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 18px;
+            }
+
+            .dropdown {
+                position: relative;
+            }
+
+            .submenu-content {
+                visibility: hidden;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                margin-left: 1rem;
+                background-color: #6a9a9a;
+                min-width: 180px;
+                padding: 0;
+                list-style-type: none;
+                top: 100%;
+                left: 0;
+            }
+
+            .dropdown:hover .submenu-content {
+                visibility: visible;
+            }
+
+            .submenu-content li a {
+                text-align: left;
+            }
+
+            nav ul li a:hover {
+                background-color: #5e8a8a;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#">A Diretoria</a>
+                    <ul class="submenu-content">
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Identidade Visual</a></li>
+                        <li><a href="#">Pedagogia</a></li>
+                        <li><a href="#">Pesquisa e Extensão</a></li>
+                        <li><a href="#">COLABINF</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Horários</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Docentes</a></li>
+                <li class="dropdown">
+                    <a href="#">Documentos</a>
+                    <ul class="submenu-content">
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Identidade Visual</a></li>
+                        <li><a href="#">Pedagogia</a></li>
+                        <li><a href="#">Pesquisa e Extensão</a></li>
+                        <li><a href="#">COLABINF</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
