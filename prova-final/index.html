@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Avaliação</title>
+        <style>
+            * {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            main {
+                display: flex;
+                background-color: #a5c588;
+                height: 100vh;
+            }
+
+            div {
+                width: 23rem;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            div span {
+                text-align: center;
+                color: white;
+                font-size: x-large;
+                font-weight: bold;
+                background-color: #70944f;
+                position: absolute;
+                left: 5rem;
+                width: 17rem;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 20px;
+            }
+
+            section {
+                width: 100%;
+            }
+
+            form {
+                width: 18rem;
+                margin: 0 auto;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+            }
+            form input {
+                padding: 1rem;
+                border: none;
+            }
+            form button {
+                color: white;
+                border: none;
+                padding: 1rem;
+                margin-top: 1rem;
+                background-color: #4c6832;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <!-- Deveria ser H1 :( -->
+                <span>IFRN</span>
+            </div>
+            <section>
+                <form action="#">
+                    <input type="text" placeholder="LOGIN" />
+                    <input type="text" placeholder="SENHA" />
+                    <button>Enviar</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
