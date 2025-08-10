@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Uma cafeteria - Contato</title>
+
+        <style>
+            @import url(header.css);
+            @import url(default.css);
+
+            main {
+                position: relative;
+                height: 100vh;
+                max-width: 838px;
+                margin: 75px auto;
+            }
+            h2 {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 49px;
+                margin-bottom: 3rem;
+            }
+            form {
+                font-family: "Montserrat";
+                max-width: 500px;
+            }
+            label {
+                display: block;
+                font-weight: 500;
+                font-size: 18px;
+                margin-bottom: 8px;
+                margin-top: 20px;
+                color: #333;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 12px 16px;
+                font-family: "Montserrat";
+                font-size: 16px;
+                border-color: #AD775C;
+                border-radius: 8px;
+                background-color: #fff;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                transition: border-color 0.3s ease;
+            }
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            textarea:focus {
+                outline: none;
+                border-color: #704b38;
+                box-shadow: 0 0 0 3px rgba(173, 119, 92, 0.1);
+            }
+            textarea {
+                height: 120px;
+                resize: vertical;
+            }
+            input[type="submit"] {
+                background-color: #704b38;
+                color: white;
+                padding: 12px 32px;
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 500;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                margin-top: 20px;
+                transition: background-color 0.3s ease;
+            }
+            input[type="submit"]:hover {
+                background-color: #5a3a2b;
+            }
+            input[type="submit"]:active {
+                background-color: #4a2f22;
+                transform: translateY(1px);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>
+                    <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12.5281 40.384C20.7201 46.12 29.7321 40.222 35.4681 32.03C41.2041 23.838 43.6621 13.354 35.4721 7.61796C27.2821 1.88196 18.2681 7.77796 12.5321 15.97C6.7961 24.162 4.3361 34.648 12.5281 40.384Z"
+                            stroke="#AD775C"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M33.178 10.8939C30.392 11.3859 22.526 15.6439 22.362 22.8539C22.196 30.0619 16.788 36.0419 14.822 37.1059C18.428 37.1899 25.474 32.3559 25.638 25.1459C25.804 17.9379 31.21 11.9579 33.178 10.8939Z"
+                            fill="#AD775C"
+                        />
+                    </svg>
+                    Uma Cafeteria
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/projeto-interface/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="/projeto-interface/cardapio.html">
+                                Nosso cardápio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/projeto-interface/nossa-historia.html">
+                                Nossa história
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/projeto-interface/contato.html">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h2>Entre em contato conosco:</h2>
+                <form action="#">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="message">Mensagem:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Digite sua mensagem aqui..."
+                        required
+                    ></textarea>
+
+                    <input type="submit" value="Enviar" />
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

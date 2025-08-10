@@ -1,0 +1,39 @@
+header {
+    background-color: #704b38;
+    color: white;
+}
+header div {
+    max-width: 838px;
+    margin: 0 auto;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-family: "Croissant One", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+ul a:visited,
+:default {
+    color: white;
+}
+nav {
+    font-family: "Croissant One", serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
