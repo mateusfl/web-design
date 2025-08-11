@@ -37,3 +37,39 @@ nav {
     align-items: center;
     gap: 8px;
 }
+
+nav > ul > li {
+    position: relative;
+}
+nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    color: #704b38;
+    padding: 8px 0;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+nav > ul > li:hover > ul {
+    display: block;
+}
+nav > ul > li > ul li {
+    display: block;
+}
+nav > ul > li > ul a {
+    display: block;
+    padding: 8px 16px;
+    color: #704b38;
+    text-decoration: none;
+    white-space: nowrap;
+}
+nav > ul > li > ul a:visited {
+    color: #704b38;
+}
+nav > ul > li > ul a:hover {
+    background: #f2e5db;
+}

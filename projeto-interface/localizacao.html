@@ -9,7 +9,8 @@
             href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <title>Uma Cafeteria</title>
+        <title>Uma cafeteria - Localização</title>
+
         <style>
             @import url(header.css);
             @import url(default.css);
@@ -17,47 +18,34 @@
             main {
                 position: relative;
                 height: 100vh;
-                background-image: url("images/cafe_background.png");
-                background-size: cover;
+                max-width: 838px;
+                margin: 75px auto;
             }
-            main h2 {
-                font-family: "Croissant One", serif;
-                position: absolute;
-                height: 57px;
-                left: 882px;
-                top: 350px;
-
-                font-family: "Croissant One";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 38px;
-                line-height: 57px;
-            }
-            main p {
-                position: absolute;
-                width: 317px;
-                height: 24px;
-                left: 882px;
-                top: 420px;
-
+            h2 {
                 font-family: "Montserrat";
                 font-style: normal;
                 font-weight: 400;
-                font-size: 18px;
-                line-height: 24px;
-
-                color: #000000;
+                font-size: 40px;
+                line-height: 49px;
+                margin-bottom: 2rem;
             }
-            .gradient {
-                position: absolute;
-                z-index: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(
-                    360deg,
-                    #ffffff -1.37%,
-                    rgba(255, 255, 255, 0) 88.47%
-                );
+            p {
+                font-family: "Montserrat";
+                margin-top: 1rem;
+            }
+            address {
+                font-family: "Montserrat";
+                font-style: normal; /* manter estilo regular, não itálico */
+                line-height: 1.6;
+            }
+            strong {
+                font-weight: 600;
+            }
+            a[href^="https://maps.google.com"],
+            a[href^="https://www.google.com/maps"]
+            {
+                color: #704b38;
+                text-decoration: underline;
             }
         </style>
     </head>
@@ -103,10 +91,15 @@
                             <a href="#">Mais</a>
                             <ul>
                                 <li>
-                                    <a href="/projeto-interface/localizacao.html">Localização</a>
+                                    <a
+                                        href="/projeto-interface/localizacao.html"
+                                        >Localização</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="/projeto-interface/contato.html">Contato</a>
+                                    <a href="/projeto-interface/contato.html"
+                                        >Contato</a
+                                    >
                                 </li>
                             </ul>
                         </li>
@@ -114,15 +107,25 @@
                 </nav>
             </div>
         </header>
-
         <main>
-            <div class="gradient"></div>
+            <h2>Localização</h2>
             <section>
-                <h2>Uma Cafeteria</h2>
+                <address>
+                    <strong>Uma Cafeteria</strong><br />
+                    Rua dos bobos, 0 — Centro<br />
+                    Natal, RN — 59000-000<br />
+                    Brasil
+                </address>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Facilis, corporis magnam sapiente.
+                    Como chegar: estamos a 2 quadras da praça central. Há vagas
+                    de estacionamento na rua.
                 </p>
+                <p>
+                    Link para o mapa:
+                    <a href="#"> abrir no Google Maps </a>
+                </p>
+                <p>Telefone: (84) 99999-0000</p>
+                <p>Horário de funcionamento: Seg–Sex 8h–19h, Sáb 9h–14h</p>
             </section>
         </main>
     </body>
