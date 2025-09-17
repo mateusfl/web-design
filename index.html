@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="mytheme">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="themes.css" />
+        <script>
+            tailwind.config = {
+                prefix: 'd-', // Your desired prefix
+                corePlugins: {
+                    preflight: false, // Disable Tailwind's base styles if they conflict with other CSS
+                }
+            }
+        </script>
         <title>home</title>
     </head>
     <body>
@@ -14,5 +28,51 @@
             <a href="../atividade-position/">atividade-position</a>
             <a href="../projeto-interface/">projeto-interface</a>
         </nav>
+        <div x-data="dropdown">
+            <div x-data="teste">
+                <p x-text="blabla"></p>
+            </div>
+            <button class="btn btn-primary" @click="toggle">Toggle Content</button>
+
+            <div x-show="open">
+                Content...
+            </div>
+        </div>
+        <div>
+            <div class="card bg-base-100 w-96 shadow-sm">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Card Title</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
     </body>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('teste', () => ({
+                blabla: false,
+
+            }))
+        })
+    </script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('dropdown', () => ({
+                open: false,
+
+                toggle() {
+                    this.open = ! this.open
+                },
+            }))
+        })
+    </script>
 </html>
