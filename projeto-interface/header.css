@@ -73,3 +73,16 @@ nav > ul > li > ul a:visited {
 nav > ul > li > ul a:hover {
     background: #f2e5db;
 }
+
+/* Botão de idioma */
+.language-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

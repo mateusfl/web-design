@@ -86,113 +86,116 @@
                             fill="#AD775C"
                         />
                     </svg>
-                    Uma Cafeteria
+                    <span data-i18n="home-title">Uma Cafeteria</span>
                 </h1>
                 <nav>
                     <ul>
                         <li>
-                            <a href="/projeto-interface/index.html">Home</a>
+                            <a href="/projeto-interface/index.html" data-i18n="nav-home">Home</a>
                         </li>
                         <li>
-                            <a href="/projeto-interface/cardapio.html">
+                            <a href="/projeto-interface/cardapio.html" data-i18n="nav-menu">
                                 Nosso cardápio
                             </a>
                         </li>
                         <li>
-                            <a href="/projeto-interface/nossa-historia.html">
+                            <a href="/projeto-interface/nossa-historia.html" data-i18n="nav-history">
                                 Nossa história
                             </a>
                         </li>
                         <li>
-                            <a href="#">Mais</a>
+                            <a href="#" data-i18n="nav-more">Mais</a>
                             <ul>
                                 <li>
-                                    <a href="/projeto-interface/localizacao.html">Localização</a>
+                                    <a href="/projeto-interface/localizacao.html" data-i18n="nav-location">Localização</a>
                                 </li>
                                 <li>
-                                    <a href="/projeto-interface/contato.html">Contato</a>
+                                    <a href="/projeto-interface/contato.html" data-i18n="nav-contact">Contato</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
+                    <button class="language-toggle" onclick="toggleLanguage()" aria-label="Trocar idioma">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                            />
+                            <path d="M2 12h20" />
+                        </svg>
+                    </button>
                 </nav>
             </div>
         </header>
         <main>
-            <h2>Cardápio</h2>
+            <h2 data-i18n="menu-title">Cardápio</h2>
             <section>
                 <div>
                     <figure>
                         <img src="" alt="" />
                     </figure>
-                    <h3>Café Expresso</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi feugiat neque a volutpat eleifend. Duis at sem
-                        quis mi porta bibendum. Donec facilisis eros vel ex
-                        consequat, sodales iaculis turpis finibus.
+                    <h3 data-i18n="menu-espresso">Café Expresso</h3>
+                    <p data-i18n="menu-espresso-desc">
+                        Café espresso tradicional, intenso e encorpado, preparado com grãos selecionados. Perfeito para começar o dia com energia.
                     </p>
                 </div>
                 <div>
                     <figure>
                         <img src="" alt="" />
                     </figure>
-                    <h3>Cappuccino</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi feugiat neque a volutpat eleifend. Duis at sem
-                        quis mi porta bibendum.
+                    <h3 data-i18n="menu-cappuccino">Cappuccino</h3>
+                    <p data-i18n="menu-cappuccino-desc">
+                        Espresso cremoso com leite vaporizado e uma generosa camada de espuma. Decorado com canela ou chocolate em pó.
                     </p>
                 </div>
                 <div>
                     <figure>
                         <img src="" alt="" />
                     </figure>
-                    <h3>Pão de Açúcar</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi feugiat neque a volutpat eleifend. Duis at sem
-                        quis mi porta bibendum. Donec facilisis eros vel ex
-                        consequat
+                    <h3 data-i18n="menu-pao-acucar">Pão de Açúcar</h3>
+                    <p data-i18n="menu-pao-acucar-desc">
+                        Delicioso pão doce tradicional, macio e levemente adocicado. Perfeito para acompanhar seu café da manhã ou lanche da tarde.
                     </p>
                 </div>
                 <div>
                     <figure>
                         <img src="" alt="" />
                     </figure>
-                    <h3>Croissant Francês</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi feugiat neque a volutpat eleifend. Duis at sem
-                        quis mi porta bibendum. Donec facilisis eros vel ex
-                        consequat, sodales iaculis turpis finibus.
+                    <h3 data-i18n="menu-croissant">Croissant Francês</h3>
+                    <p data-i18n="menu-croissant-desc">
+                        Croissant artesanal, folhado e crocante por fora, macio por dentro. Disponível em versões doce e salgada.
                     </p>
                 </div>
                 <div>
                     <figure>
                         <img src="" alt="" />
                     </figure>
-                    <h3>Torta de Limão</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi feugiat neque a volutpat eleifend. Duis at sem
-                        quis mi porta bibendum. Donec facilisis eros vel ex
-                        consequat, sodales iaculis turpis finibus.
+                    <h3 data-i18n="menu-torta-limao">Torta de Limão</h3>
+                    <p data-i18n="menu-torta-limao-desc">
+                        Torta cremosa de limão com base crocante de biscoito. O equilíbrio perfeito entre doce e azedo.
                     </p>
                 </div>
                 <div>
                     <figure>
                         <img src="" alt="" />
                     </figure>
-                    <h3>Sanduíche Natural</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi feugiat neque a volutpat eleifend. Duis at sem
-                        quis mi porta bibendum. Donec facilisis eros vel ex
-                        consequat, sodales iaculis turpis finibus.
+                    <h3 data-i18n="menu-sanduiche">Sanduíche Natural</h3>
+                    <p data-i18n="menu-sanduiche-desc">
+                        Sanduíche fresco preparado com ingredientes selecionados, pão artesanal e vegetais da estação. Opções vegetarianas disponíveis.
                     </p>
                 </div>
             </section>
         </main>
+        <script src="i18n.js"></script>
     </body>
 </html>
